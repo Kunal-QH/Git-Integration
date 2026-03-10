@@ -14,7 +14,6 @@
       "settings": {
         "hero_image": "shopify://shop_images/BasilHero.webp",
         "wave_image": "shopify://shop_images/BasilHeroSVG.webp",
-        "button_text": "",
         "button_link": ""
       }
     },
@@ -55,7 +54,76 @@
     },
     "tabs": {
       "type": "basil-discover-style",
-      "blocks": {},
+      "blocks": {
+        "discover_card_7ydw3D": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Age",
+            "image": "shopify://shop_images/Category_Card_pre_primary.webp",
+            "title": "Toddlers",
+            "badge": "",
+            "link": ""
+          }
+        },
+        "discover_card_3yhKnM": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Age",
+            "image": "shopify://shop_images/Middle_School.webp",
+            "title": "Kids",
+            "badge": "",
+            "link": ""
+          }
+        },
+        "discover_card_PNgnzM": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Age",
+            "image": "shopify://shop_images/Teens_Adults.webp",
+            "title": "Teens & Adults",
+            "badge": "",
+            "link": ""
+          }
+        },
+        "discover_card_pwMdh9": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Character",
+            "image": "shopify://shop_images/Group_2147204944_0a7b227f-4d91-4692-8bd8-fb715853d588.webp",
+            "title": "Pixie Dash",
+            "badge": "",
+            "link": ""
+          }
+        },
+        "discover_card_8QWMnF": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Character",
+            "image": "shopify://shop_images/Group_2147204945_f77787be-a1f7-4c11-8d87-00cf7684333f.webp",
+            "title": "Super Swoosh",
+            "badge": "",
+            "link": ""
+          }
+        },
+        "discover_card_rW3WaN": {
+          "type": "discover_card",
+          "settings": {
+            "tab": "Shop By Character",
+            "image": "shopify://shop_images/Group_2147204946_f1f05e98-1f2f-4df8-87ad-57fdf606d3b6.webp",
+            "title": "Hocus Docus",
+            "badge": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "discover_card_7ydw3D",
+        "discover_card_3yhKnM",
+        "discover_card_PNgnzM",
+        "discover_card_pwMdh9",
+        "discover_card_8QWMnF",
+        "discover_card_rW3WaN"
+      ],
       "settings": {
         "heading": "Discover Your Style",
         "subheading": "BECAUSE EVERYONE HAS THEIR OWN KIND OF AWESOME"
