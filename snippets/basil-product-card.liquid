@@ -1,0 +1,63 @@
+<div class="basil-card">
+  <div class="basil-card-media">
+    {% if product.featured_image %}
+      <img
+        src="{{ product.featured_image | image_url: width: 800 }}"
+        alt="{{ product.title }}"
+      >
+    {% endif %}
+
+    <div class="basil-badges">
+      {% if product.tags contains 'new' %}
+        <span class="badge yellow">New Launch</span>
+      {% endif %}
+
+      {% if product.tags contains 'limited' %}
+        <span class="badge purple">Limited Drop</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="basil-card-body">
+    <h3 class="basil-title">
+      {{ product.title }}
+    </h3>
+
+    <p class="basil-desc">
+      {{ product.description | strip_html | truncate: 70 }}
+    </p>
+
+    <div class="basil-rating">
+      ★★★★★
+      <span class="rating-text">4.9 stars</span>
+    </div>
+
+    <div class="basil-price">
+      <span class="sale">
+        {{ product.price | money }}
+      </span>
+
+      {% if product.compare_at_price > product.price %}
+        <span class="mrp"> MRP {{ product.compare_at_price | money }} </span>
+
+        {% assign discount = product.compare_at_price
+          | minus: product.price
+          | times: 100
+          | divided_by: product.compare_at_price
+        %}
+
+        <span class="discount"> {{ discount }}% OFF </span>
+      {% endif %}
+    </div>
+
+    <form method="post" action="/cart/add">
+      <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"
+      >
+
+      <button class="basil-cart-btn">Add to Cart</button>
+    </form>
+  </div>
+</div>

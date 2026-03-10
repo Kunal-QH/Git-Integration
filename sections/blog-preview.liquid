@@ -1,0 +1,23 @@
+
+<section class="container">
+<h2>From our blog</h2>
+
+<div class="product-grid">
+{% for article in blogs.news.articles limit:3 %}
+<div class="product-card">
+<h3>{{ article.title }}</h3>
+<p>{{ article.excerpt | strip_html | truncate:120 }}</p>
+<a href="{{ article.url }}">Read more</a>
+</div>
+{% endfor %}
+</div>
+
+</section>
+
+{% schema %}
+{
+"name":"Blog Preview",
+"settings":[],
+"presets":[{"name":"Blog Preview"}]
+}
+{% endschema %}

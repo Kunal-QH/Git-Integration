@@ -1,0 +1,52 @@
+<section class="basil-hero">
+  <div class="hero-image-wrapper">
+    {% if section.settings.hero_image %}
+      <img
+        class="hero-image"
+        src="{{ section.settings.hero_image | image_url: width: 2000 }}"
+        alt="Hero"
+      >
+    {% endif %}
+
+    <a href="{{ section.settings.button_link }}" class="hero-button">
+      {{ section.settings.button_text }}
+    </a>
+    <div class="hero-wave">
+      <img src="{{ section.settings.wave_image | image_url: width: 2000 }}">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Basil Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_image",
+      "label": "Wave Divider"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "default": "SHOP NOW",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Basil Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,90 @@
+<div class="announcement-bar">
+  <button class="announcement-btn" id="announcement-prev-button">
+    <svg
+      role="presentation"
+      focusable="false"
+      width="7"
+      height="10"
+      class="icon icon-chevron-left reverse-icon"
+      viewBox="0 0 7 10"
+    >
+      <path d="M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+  </button>
+  {% for block in section.blocks %}
+    <div
+      class="announcement-text"
+      {% unless forloop.first %}
+        style="display: none;"
+      {% endunless %}
+      data-index="{{ forloop.index0 }}"
+    >
+      {{ block.settings.text }}
+    </div>
+  {% endfor %}
+  <button class="announcement-btn" id="announcement-next-button">
+    <svg
+      role="presentation"
+      focusable="false"
+      width="7"
+      height="10"
+      class="icon icon-chevron-right reverse-icon"
+      viewBox="0 0 7 10"
+    >
+      <path d="m1 9 4-4-4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const items = document.querySelectorAll('.announcement-text');
+    const prevButton = document.getElementById('announcement-prev-button');
+    const nextButton = document.getElementById('announcement-next-button');
+    let currentIndex = 0;
+
+    prevButton.addEventListener('click', () => {
+      items[currentIndex].style.display = 'none';
+      currentIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : items.length - 1;
+      items[currentIndex].style.display = 'block';
+    });
+
+    nextButton.addEventListener('click', () => {
+      items[currentIndex].style.display = 'none';
+      currentIndex = currentIndex + 1 < items.length ? currentIndex + 1 : 0;
+      items[currentIndex].style.display = 'block';
+    });
+  });
+</script>
+
+<style>
+  .announcement-bar {
+    background: rgb(246 241 218);
+    color: rgb(239 112 116);
+    text-align: center;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .announcement-btn {
+    background: none;
+    border: none;
+    color: rgb(239 112 116);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Announcement",
+      "name": "Announcement",
+      "settings": [{ "type": "text", "id": "text", "label": "Announcement" }]
+    }
+  ],
+  "presets": [{ "name": "Announcement Bar" }]
+}
+{% endschema %}

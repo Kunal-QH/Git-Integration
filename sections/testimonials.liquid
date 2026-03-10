@@ -1,0 +1,31 @@
+<section class="container">
+  <h2>{{ section.settings.heading }}</h2>
+  <div class="product-grid">
+    {% for block in section.blocks %}
+      <div class="testimonial">
+        <p>{{ block.settings.quote }}</p>
+        <strong>{{ block.settings.author }}</strong>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    { "type": "text", "id": "heading", "default": "Loved by Little Hands", "label": "Testimonials Section" }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Quote" },
+        { "type": "text", "id": "author", "label": "Author" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Testimonials" }]
+}
+{% endschema %}

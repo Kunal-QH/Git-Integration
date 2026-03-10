@@ -1,0 +1,61 @@
+<section class="press-strip">
+  <div class="page-width">
+    <div class="press-container">
+      {% for block in section.blocks %}
+        <div class="press-logo">
+          {{ block.settings.logo | image_url: width: 200 | image_tag }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .press-strip {
+    position: relative;
+    background: #f5821f;
+    padding: 20px 0;
+    margin: 30px 30px 30px 30px;
+    border-radius: 30px;
+  }
+
+  .press-strip::before {
+    content: '';
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-45%);
+    background-image: url('https://cdn.shopify.com/s/files/1/0782/5388/3681/files/Group_2147204918.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .press-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3em;
+    flex-wrap: wrap;
+  }
+
+  .press-logo img {
+    height: 4em;
+    object-fit: contain;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Press Logos",
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [{ "type": "image_picker", "id": "logo", "label": "Logo" }]
+    }
+  ],
+  "presets": [{ "name": "Press Logos" }]
+}
+{% endschema %}

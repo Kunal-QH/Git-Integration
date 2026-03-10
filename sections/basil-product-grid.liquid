@@ -1,0 +1,108 @@
+<section class="basil-products">
+  <div class="basil-product-home-content">
+    <h2 class="basil-product-home-title">{{ section.settings.heading }}</h2>
+    <p class="basil-product-home-subtitle">{{ section.settings.subheading }}</p>
+
+    <div class="basil-product-home-tabs">
+      {% for block in section.blocks %}
+        <button
+          type="button"
+          class="basil-product-home-tab {% if forloop.first %}active{% endif %}"
+          data-target="collection-{{ block.id }}"
+          onclick="switchBasilTab(this)"
+        >
+          {{ block.settings.label }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container">
+    {% for block in section.blocks %}
+      {% assign current_collection = block.settings.collection %}
+
+      <div
+        id="collection-{{ block.id }}"
+        class="basil-collection-container"
+        style="{% unless forloop.first %}display: none;{% endunless %}"
+      >
+        <div class="basil-grid">
+          {% for product in current_collection.products limit: 8 %}
+            {% render 'basil-product-card', product: product %}
+          {% else %}
+            <p>No products found in this collection.</p>
+          {% endfor %}
+        </div>
+
+        <div class="view-all">
+          <a href="{{ current_collection.url }}"> View All {{ current_collection.title }} </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  function switchBasilTab(button) {
+    const targetId = button.getAttribute('data-target');
+
+    // 1. Update Button States
+    document.querySelectorAll('.basil-product-home-tab').forEach((btn) => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+
+    // 2. Switch Visible Collections
+    document.querySelectorAll('.basil-collection-container').forEach((container) => {
+      container.style.display = 'none';
+    });
+
+    const activeContainer = document.getElementById(targetId);
+    if (activeContainer) {
+      activeContainer.style.display = 'block';
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Basil Product Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Mushroom Edit 🍄",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "FOR BIG DREAMERS IN SMALL SHOES",
+      "label": "Subheading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab Label"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Basil Product Grid"
+    }
+  ]
+}
+{% endschema %}

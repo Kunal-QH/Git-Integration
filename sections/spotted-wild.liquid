@@ -1,0 +1,129 @@
+<section class="ugc-section">
+  <div class="page-width">
+    <div class="ugc-header">
+      <h2 class="ugc-title">{{ section.settings.heading }}</h2>
+      <p class="ugc-subtitle">{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="ugc-grid">
+      {% for block in section.blocks %}
+        <div class="ugc-card">
+          {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+
+          <div class="ugc-product">
+            {{ block.settings.product.featured_image | image_url: width: 100 | image_tag }}
+
+            <div>
+              <p>{{ block.settings.product.title }}</p>
+
+              <span class="price">
+                {{ block.settings.product.price | money }}
+              </span>
+            </div>
+
+            <a href="{{ block.settings.product.url }}" class="ugc-add">+</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+    .ugc-section {
+      padding: 80px 60px;
+    }
+
+    .ugc-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .ugc-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: #243f35;
+      margin-bottom: 10px;
+    }
+
+    .ugc-subtitle {
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: #4a5d52;
+      margin-bottom: 30px;
+    }
+
+    .ugc-grid {
+      display: flex;
+      {% comment %} grid-template-columns: repeat(5, 1fr); {% endcomment %}
+      gap: 20px;
+      overflow-x: scroll;
+    }
+
+    .ugc-card {
+      min-width: 15vw;
+      width: 15%;
+      overflow: hidden;
+    }
+
+    .ugc-card video {
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .ugc-product {
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8em;
+    }
+
+    .ugc-product > img {
+      height: 50%;
+      width: 30%;
+    }
+
+  .ugc-product > div {
+    font-weight: 800;
+  }
+
+  .ugc-product > div > .price {
+    color: red;
+  }
+
+    .ugc-add {
+      background: #0f6c53;
+      color: white;
+      min-width: 28px;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Spotted in the Wild",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Spotted in the Wild" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Real moments, real magic" }
+  ],
+  "blocks": [
+    {
+      "type": "ugc",
+      "name": "UGC Post",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Video" },
+        { "type": "product", "id": "product", "label": "Product" }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [{ "name": "Spotted in the Wild" }]
+}
+{% endschema %}

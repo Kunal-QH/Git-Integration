@@ -1,0 +1,57 @@
+<section class="basil-features">
+  <div class="container">
+    <h2 class="features-title">
+      {{ section.settings.heading }}
+    </h2>
+
+    <p class="features-sub">
+      {{ section.settings.subheading }}
+    </p>
+
+    <div class="features-grid">
+      {% for block in section.blocks %}
+        <div class="feature-item">
+          <img
+            src="{{ block.settings.icon | image_url: width:120 }}"
+            class="feature-icon"
+          >
+
+          <p>
+            {{ block.settings.text }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Basil Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "1 Lakh+ Happy Families",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "BECAUSE WHEN BASIL PACKS IT, KIDS SNACK IT!",
+      "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "text", "label": "Text" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Basil Features" }]
+}
+{% endschema %}

@@ -1,0 +1,23 @@
+<section>
+  <a href="{{ section.settings.link }}" class="promo-link">
+    {{ section.settings.image | image_url: width: 900 | image_tag }}
+  </a>
+</section>
+
+<style>
+  .promo-link img {
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Promo Banner",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ],
+  "presets": [{ "name": "Promo Banner" }]
+}
+{% endschema %}

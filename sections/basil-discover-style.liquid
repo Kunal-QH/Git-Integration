@@ -1,0 +1,73 @@
+<section class="basil-discover">
+  <div class="container">
+    <h2 class="discover-title">
+      {{ section.settings.heading }}
+    </h2>
+
+    <p class="discover-subtitle">
+      {{ section.settings.subheading }}
+    </p>
+
+    <div class="discover-tabs">
+      <button class="discover-tab active">Shop By Age</button>
+
+      <button class="discover-tab">Shop By Character</button>
+    </div>
+
+    <div class="discover-grid">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}" class="discover-card">
+          <div class="discover-image">
+            <img
+              src="{{ block.settings.image | image_url: width: 600 }}"
+              alt=""
+            >
+
+            {% comment %}
+               <span class="age-badge">
+                {{ block.settings.age }}
+              </span>
+            {% endcomment %}
+          </div>
+
+          <h3 class="discover-label">
+            {{ block.settings.title }}
+          </h3>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Discover Style",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Discover Your Style",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "BECAUSE EVERYONE HAS THEIR OWN KIND OF AWESOME",
+      "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "age",
+      "name": "Age Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "age", "label": "Age Badge" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Discover Style" }]
+}
+{% endschema %}
