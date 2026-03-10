@@ -8,26 +8,47 @@
       {{ section.settings.subheading }}
     </p>
 
+    <!-- TABS -->
     <div class="discover-tabs">
-      <button class="discover-tab active">Shop By Age</button>
+      {% assign tabs = '' %}
 
-      <button class="discover-tab">Shop By Character</button>
+      {% for block in section.blocks %}
+        {% assign tabs = tabs | append: block.settings.tab | append: ',' %}
+      {% endfor %}
+
+      {% assign tabs = tabs | split: ',' | uniq %}
+
+      {% for tab in tabs %}
+        {% if tab != blank %}
+          <button
+            class="discover-tab {% if forloop.first %}active{% endif %}"
+            data-tab="{{ tab | handle }}"
+          >
+            {{ tab }}
+          </button>
+        {% endif %}
+      {% endfor %}
     </div>
 
+    <!-- GRID -->
     <div class="discover-grid">
       {% for block in section.blocks %}
-        <a href="{{ block.settings.link }}" class="discover-card">
+        <a
+          href="{{ block.settings.link }}"
+          class="discover-card"
+          data-tab="{{ block.settings.tab | handle }}"
+        >
           <div class="discover-image">
             <img
               src="{{ block.settings.image | image_url: width: 600 }}"
-              alt=""
+              alt="{{ block.settings.title }}"
             >
 
-            {% comment %}
-               <span class="age-badge">
-                {{ block.settings.age }}
+            {% if block.settings.badge != blank %}
+              <span class="age-badge">
+                {{ block.settings.badge }}
               </span>
-            {% endcomment %}
+            {% endif %}
           </div>
 
           <h3 class="discover-label">
@@ -38,6 +59,48 @@
     </div>
   </div>
 </section>
+
+<style>
+  .discover-card {
+    transition: 0.3s;
+  }
+
+  .discover-card[style*='none'] {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.discover-tab').forEach((tab) => {
+    tab.addEventListener('click', function () {
+      const tabName = this.dataset.tab;
+
+      document.querySelectorAll('.discover-tab').forEach((t) => {
+        t.classList.remove('active');
+      });
+
+      this.classList.add('active');
+
+      document.querySelectorAll('.discover-card').forEach((card) => {
+        if (card.dataset.tab === tabName) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  /* show first tab initially */
+
+  document.querySelectorAll('.basil-discover').forEach((section) => {
+    const firstTab = section.querySelector('.discover-tab');
+
+    if (firstTab) {
+      firstTab.click();
+    }
+  });
+</script>
 
 {% schema %}
 {
@@ -58,16 +121,42 @@
   ],
   "blocks": [
     {
-      "type": "age",
-      "name": "Age Card",
+      "type": "discover_card",
+      "name": "Discover Card",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Image" },
-        { "type": "text", "id": "title", "label": "Title" },
-        { "type": "text", "id": "age", "label": "Age Badge" },
-        { "type": "url", "id": "link", "label": "Link" }
+        {
+          "type": "text",
+          "id": "tab",
+          "label": "Tab Name",
+          "default": "Shop By Age"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge (Optional)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
       ]
     }
   ],
-  "presets": [{ "name": "Discover Style" }]
+  "presets": [
+    {
+      "name": "Discover Style"
+    }
+  ]
 }
 {% endschema %}

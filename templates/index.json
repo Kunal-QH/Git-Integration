@@ -55,40 +55,7 @@
     },
     "tabs": {
       "type": "basil-discover-style",
-      "blocks": {
-        "age_pQV6xB": {
-          "type": "age",
-          "settings": {
-            "image": "shopify://shop_images/Category_Card_pre_primary.webp",
-            "title": "",
-            "age": "",
-            "link": ""
-          }
-        },
-        "age_PW66tN": {
-          "type": "age",
-          "settings": {
-            "image": "shopify://shop_images/Middle_School.webp",
-            "title": "",
-            "age": "",
-            "link": ""
-          }
-        },
-        "age_YbgT4x": {
-          "type": "age",
-          "settings": {
-            "image": "shopify://shop_images/Teens_Adults.webp",
-            "title": "",
-            "age": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "age_pQV6xB",
-        "age_PW66tN",
-        "age_YbgT4x"
-      ],
+      "blocks": {},
       "settings": {
         "heading": "Discover Your Style",
         "subheading": "BECAUSE EVERYONE HAS THEIR OWN KIND OF AWESOME"
