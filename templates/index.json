@@ -1,40 +1,339 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
-      "type": "hero-banner"
+      "type": "hero-banner",
+      "settings": {
+        "hero_image": "shopify://shop_images/BasilHero.webp",
+        "wave_image": "shopify://shop_images/BasilHeroSVG.webp",
+        "button_text": "",
+        "button_link": ""
+      }
     },
     "productGrid1": {
-      "type": "basil-product-grid"
+      "type": "basil-product-grid",
+      "blocks": {
+        "tab_F6TbgP": {
+          "type": "tab",
+          "settings": {
+            "label": "Lil' Imperfect Sale",
+            "collection": "accessories"
+          }
+        },
+        "tab_6kqj6F": {
+          "type": "tab",
+          "settings": {
+            "label": "Best Seller",
+            "collection": "everyday-essentials"
+          }
+        },
+        "tab_PhhyEi": {
+          "type": "tab",
+          "settings": {
+            "label": "New Arrivals",
+            "collection": "all-products"
+          }
+        }
+      },
+      "block_order": [
+        "tab_F6TbgP",
+        "tab_6kqj6F",
+        "tab_PhhyEi"
+      ],
+      "settings": {
+        "heading": "Mushroom Edit 🍄",
+        "subheading": "FOR BIG DREAMERS IN SMALL SHOES"
+      }
     },
     "tabs": {
-      "type": "basil-discover-style"
+      "type": "basil-discover-style",
+      "blocks": {
+        "age_pQV6xB": {
+          "type": "age",
+          "settings": {
+            "image": "shopify://shop_images/Category_Card_pre_primary.webp",
+            "title": "",
+            "age": "",
+            "link": ""
+          }
+        },
+        "age_PW66tN": {
+          "type": "age",
+          "settings": {
+            "image": "shopify://shop_images/Middle_School.webp",
+            "title": "",
+            "age": "",
+            "link": ""
+          }
+        },
+        "age_YbgT4x": {
+          "type": "age",
+          "settings": {
+            "image": "shopify://shop_images/Teens_Adults.webp",
+            "title": "",
+            "age": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "age_pQV6xB",
+        "age_PW66tN",
+        "age_YbgT4x"
+      ],
+      "settings": {
+        "heading": "Discover Your Style",
+        "subheading": "BECAUSE EVERYONE HAS THEIR OWN KIND OF AWESOME"
+      }
     },
     "features": {
-      "type": "basil-features"
+      "type": "basil-features",
+      "blocks": {
+        "feature_4xRAr8": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2147204991_1024x1024_86337b6d-aa28-4139-986e-8da0b70338d6.webp",
+            "text": "Co-Created with You"
+          }
+        },
+        "feature_tmNUz6": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2147204999_1024x1024_16d5753b-c2cb-4a9b-97ca-505b52868f96.webp",
+            "text": "Made in India & the World"
+          }
+        },
+        "feature_jmtPbF": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2147204998_1024x1024_a5eef15b-289d-4e5f-a97e-bbf69c3f6d97.webp",
+            "text": "Unapologetically Unique"
+          }
+        },
+        "feature_9bkiVU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2147204992_1024x1024_fe61786e-58ed-4c4e-80a2-093b740880b1.webp",
+            "text": "6 Months Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "feature_4xRAr8",
+        "feature_tmNUz6",
+        "feature_jmtPbF",
+        "feature_9bkiVU"
+      ],
+      "settings": {
+        "heading": "1 Lakh+ Happy Families",
+        "subheading": "BECAUSE WHEN BASIL PACKS IT, KIDS SNACK IT!"
+      }
     },
     "testimonials": {
-      "type": "basil-testimonials"
+      "type": "basil-testimonials",
+      "blocks": {
+        "review_LBakFK": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1_1024x1024_ac4abf6f-178e-4c31-91b0-545a30d27453.webp",
+            "title": "Adorable & Cute",
+            "text": "My daughter loves the bento box, especially the design. Would definitely recommend Basil to all parents.",
+            "author": "Sneha"
+          }
+        },
+        "review_rmJUCc": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_2147205132_1024x1024_0c9eaebd-66f8-445a-bdef-7e76292de676.webp",
+            "title": "Perfect Size",
+            "text": "Love the quality of the tiffin box , easy to use too. I am able to pack larger quantity and balanced diet for my kid. The perfect size bento!",
+            "author": "Nehal M"
+          }
+        },
+        "review_C8B3TA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_2147205132_1024x1024_26b71e96-97f1-4ad8-8dc5-c95f5f6bfb24.webp",
+            "title": "No Leak Bento",
+            "text": "Bought the bento for my daughter. Leak proof and you can carry dry/wet food without much worry! It’s also sleek.",
+            "author": "Shraddha Uchil"
+          }
+        },
+        "review_NTUYRE": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_2147205132_1024x1024_5efea04a-d9e5-43e9-8712-06cc306e4c46.webp",
+            "title": "Coolest Bento",
+            "text": "Exactly what I was looking for! My son Loves it! The quality & design is superb. Does not leak and enough space for food.",
+            "author": "Bhavika Himalay"
+          }
+        }
+      },
+      "block_order": [
+        "review_LBakFK",
+        "review_rmJUCc",
+        "review_C8B3TA",
+        "review_NTUYRE"
+      ],
+      "settings": {}
     },
     "productGrid2": {
-      "type": "basil-product-grid"
+      "type": "basil-product-grid",
+      "blocks": {
+        "tab_ztJxqM": {
+          "type": "tab",
+          "settings": {
+            "label": "Bento Boxes",
+            "collection": "everyday-essentials"
+          }
+        },
+        "tab_8dc87D": {
+          "type": "tab",
+          "settings": {
+            "label": "Thermotot",
+            "collection": "accessories"
+          }
+        }
+      },
+      "block_order": [
+        "tab_ztJxqM",
+        "tab_8dc87D"
+      ],
+      "settings": {
+        "heading": "Find Everything You & Your Lil' One Need!",
+        "subheading": "CRAFTED WITH CARE, BUILT FOR JOY"
+      }
     },
     "founder": {
-      "type": "founder-quote"
+      "type": "founder-quote",
+      "settings": {
+        "video": "shopify://files/videos/FounderVideo.mp4",
+        "heading": "Lil' mischief. Lil' Magic. Whole Lot of Personality!",
+        "name": "Harini, Co-Founder at Basil",
+        "text": "We're here to turn the ordinary into mini moments of joy!",
+        "button_label": "Know More",
+        "button_link": ""
+      }
     },
     "ugc": {
-      "type": "spotted-wild"
+      "type": "spotted-wild",
+      "blocks": {
+        "ugc_ywRLED": {
+          "type": "ugc",
+          "settings": {
+            "video": "shopify://files/videos/1c3a61b921884d3988061f4642544735.HD-720p-1.6Mbps-51248873.mp4",
+            "product": "pastel-hoodie"
+          }
+        },
+        "ugc_eBfMxm": {
+          "type": "ugc",
+          "settings": {
+            "video": "shopify://files/videos/1c3a61b921884d3988061f4642544735.HD-720p-1.6Mbps-51248873.mp4",
+            "product": "relaxed-fit-sweatpants"
+          }
+        },
+        "ugc_7MwHWX": {
+          "type": "ugc",
+          "settings": {
+            "video": "shopify://files/videos/1c3a61b921884d3988061f4642544735.HD-720p-1.6Mbps-51248873.mp4",
+            "product": "oversized-t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "ugc_ywRLED",
+        "ugc_eBfMxm",
+        "ugc_7MwHWX"
+      ],
+      "settings": {
+        "heading": "SPOTTED IN THE WILD 📷",
+        "subheading": "REAL MOMENTS, REAL MAGIC, REAL FAMILIES"
+      }
     },
     "blogs": {
-      "type": "notebook-blog"
+      "type": "notebook-blog",
+      "blocks": {
+        "post_DDNPPD": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Blog-1.webp",
+            "tag": "Hacks",
+            "title": "Creative Ideas for Packing Fun Kids Lunches",
+            "text": "Discover exciting ways to pack healthy and fun lunches for kids. Explore creative ideas, expert tips, and nutritional insights for balanced meals.",
+            "link": ""
+          }
+        },
+        "post_3ARVNy": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Blog-1.webp",
+            "tag": "Recipie",
+            "title": "Efficient Tips for Packing School Lunches",
+            "text": "Discover quick and efficient tips for packing nutritious school lunches that kids will love, making mornings less stressful for parents.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_DDNPPD",
+        "post_3ARVNy"
+      ],
+      "settings": {
+        "heading": "Our Notebook",
+        "subheading": "LAST MINUTE NOTES ON ALL THINGS KIDS"
+      }
     },
     "press": {
-      "type": "press-logos"
+      "type": "press-logos",
+      "blocks": {
+        "logo_a798Dt": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Press3.avif"
+          }
+        },
+        "logo_r3U8hp": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Press2.webp"
+          }
+        },
+        "logo_dDCLVB": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Press1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "logo_a798Dt",
+        "logo_r3U8hp",
+        "logo_dDCLVB"
+      ],
+      "settings": {}
     },
     "seoText": {
-      "type": "basil-seo-text"
+      "type": "basil-seo-text",
+      "settings": {
+        "heading": "Shop India’s No.1 stainless steel bento lunch box online for kids & adults",
+        "short_text": "Every parent knows the struggle. You pack a healthy lunch box, kiss your child goodbye, and simply hope that they will eat their food.",
+        "full_text": "<p>To remove the guesswork, choosing the right kids lunch box is very important. The idea is simple: parents want safety, kids want fun, and everyone wants food that stays fresh, leak-free, and inviting. </p><p>That is why Basil’s leak proof stainless steel bento box for kids in India is loved by children and parents alike. Our school lunch boxes have been thoughtfully designed to make lunch the happiest meal of the day.</p><p>Basil brings to you the most amazing blend of safety, design, durability, and child-first design while shopping for a tiffin lunch box for kids.</p><h2>What Makes Basil’s Kids Lunch Box Easy for Small Hands to Use</h2><p>Every parent who's searching for the perfect lunch box for kids in India wants this one thing for sure: a tiffin that their child can open on their own without spills, struggles, or calling the teacher for help. </p><p>Basil's stainless steel tiffin box in India is designed from a child's point of view. Here is why you and your child will love a tiffin box for kids.</p><ul><li>Soft, easy-open latches</li></ul><p>The smooth-click mechanism on every kids lunch box opens without force. This way, even small fingers can unlock their meal without asking for help.</p><ul><li>Balanced weight</li></ul><p>Our lunch box for kids feels sturdy yet light. This makes it easy to carry.</p><ul><li>Rounded, safe edges</li></ul><p>With our kids tiffin boxes, you won’t have to worry about sharp corners, only gentle curves that are comfortable to hold and safe to use every day.</p><ul><li>Leak-proof confidence</li></ul><p>A tightly sealed tiffin box for kids means no spills in school bags. Therefore, children can open our lunch box for kids without fear of a messy surprise.</p><ul><li>Grip-friendly</li></ul><p>Thoughtfully contoured sides make this kids tiffin box easy to lift, open, and close.</p><ul><li>Dishwasher-safe</li></ul><p>With Basil’s tiffin box for kids, parents get everyday convenience, and kids get a fresh, clean bpa free lunch box that’s ever ready for daily adventures.</p><h2>Check out 100% leak proof bento tiffin boxes designed for every age group</h2><p>Our leak proof lunch box range is not just about carrying food, but also about sparking joy and turning mealtime into something your little one will enjoy. When kids have a bento lunch box that is colorful and cool, they are bound to feel motivated to eat. And parents, you can rest assured that every bite is packed in premium and safe materials.</p><p>Our bento lunch box for kids is fun and well-designed. It can literally change the way kids feel about food. Furthermore, our stainless steel lunch box with compartments is:</p><ul><li>Dishwasher safe</li><li>Super smooth open & close latch (easy for little hands)</li><li>100% leak resistant</li><li>Comes with a 6-Month warranty for worry-free use</li></ul><h3>Bento lunch box for toddlers (3-5 years)</h3><p>Check out our collection of perfectly portioned <a href=\"https://yourbasil.com/collections/toddlers\">school lunch boxes for toddlers</a>. Our bento boxes come with easy-grip latches that little hands can easily manage.</p><h3>Bento stainless steel lunch box for kids (6-12 Years)</h3><p>At this age, kids love to be the cool kid! So, you can check out our vibrant and personality-packed <a href=\"https://yourbasil.com/collections/kids-1\">stainless steel bento lunch box for kids</a> in cute designs that your child is definitely going to love.</p><h3>Bento lunch boxes for adults (13+ years)</h3><p>Besides school lunch boxes, you can also take a look at our sleek and functional <a href=\"https://yourbasil.com/collections/bento-for-adults\">bento lunch boxes for adults</a> for office use. After all, grown-ups deserve great designs as well.</p><h2>Explore collection of colourful bento boxes with compartments</h2><p>Kids love choices, and parents love meals; our compartment-style bentos are here to make everyone happy. </p><p>Our durable kids' bento lunch box with compartments encourages children to try new foods, eat better portions, and finish their meals.</p><h3>2 Compartment stainless steel bento lunch box</h3><p>This leak proof lunch box design is simple, balanced, and absolutely perfect for toddlers and light-eaters. Our <a href=\"https://yourbasil.com/collections/bento-lite-2c\">2 compartment lunch box</a>for school is ideal for keeping meals fresh and separated. This is going to work very well for you if you want to pack a main dish and a side dish for your child. </p><h3>3 Compartment stainless steel bento lunch box</h3><p>Our stainless steel bento <a href=\"https://yourbasil.com/collections/bento-neo\">3 compartment lunch box</a> is the sweet spot for variety. You can pack two dishes and a sweet treat without mixing anything. This stainless steel bento box design is here to make portion control easy and super fun.</p><h3>4 Compartment stainless steel bento lunch box</h3><p>Our Bento <a href=\"https://yourbasil.com/collections/bento-quad\">4 compartment lunch box</a> is amongst the best kids lunch boxes for school because it offers maximum variety and zero mess. There are four sections for diverse meals; all-in-one bento lunch boxes for kids.<br/></p><h2>Choose BPA Free Lunch Box for Kids by Character Theme</h2><p>Your child does not just carry a kid's lunch box to school, but they carry a story of love, care, and nourishment. Basil's BPA-free lunch box collection fits into your child's dreamy little world where imagination always sits beside the sandwiches!</p><h3>Unicorn lunch box for kids</h3><p>This is an adorable lunch box for kids that's sprinkled with the charm of pastel wonders and playful unicorns. Believe us, a <a href=\"https://yourbasil.com/collections/pixie-dash\">unicorn themed kids' tiffin box</a> will make every bite feel like a picnic in the clouds.</p><h3>Space tiffin box for kids</h3><p>A <a href=\"https://yourbasil.com/collections/super-swoosh\">space themed tiffin box</a> for kids will turn your child's lunchtime into a space adventure. Rockets, stars, and planets transform a simple kid's lunch box into something super dreamy for your little one.</p><h3>Dinosaur Theme kids tiffin box</h3><p>This Tiffin box for kids is full of roaring prehistoric fun. Our <a href=\"https://yourbasil.com/collections/hocus-docus\">dinosaur themed lunch box</a> for kids will invite little explorers to discover their food like hidden fossils.</p><h3>Aqua theme lunch box for kids</h3><p>Cool blues and flowing waves create a calm, <a href=\"https://yourbasil.com/collections/aqua-mist\">ocean inspired kids' lunch box</a>. This soothing BPA-free lunch box for kids feels like an underwater daydream.</p><h3>Race car kids lunch box</h3><p>Our <a href=\"https://yourbasil.com/collections/black-cars\">race car themed kids lunch box</a> is full of energy. It's a dynamic lunch box for kids that will turn recess time into a racing adventure.</p><h3>Cloud theme lunch box for kids</h3><p>Soft and floaty, this tiffin box for kids feels like carrying a piece of the sky in your backpack. Our <a href=\"https://yourbasil.com/collections/cloud-hopper\">cloud themed kids’ tiffin box</a> will make mealtime happy and comforting.</p><h2>Check out gifting options available in bento compartment lunch boxes</h2><p>If you have been looking for a thoughtful, functional, and genuinely exciting gift, check out our curated collection of gifting options that are sure to dazzle any celebration.</p><h3>Birthday gifting </h3><p>Make birthday gifting more meaningful with bento compartment lunch boxes, BPA-free bentos, kids' water bottles, plates, and snack-friendly accessories that kids are going to love using every single day. Our products are made with 304 stainless steel, a premium, safe material, with kid-first functionality in mind. Moreover, you can even pair the bento boxes with water bottles and plates for a complete, thoughtful <a href=\"https://yourbasil.com/pages/birthday-gifting\">kids birthday gift</a> pack.</p><h3>Corporate gifting </h3><p>We offer smart, stylish and relevant <a href=\"https://yourbasil.com/pages/corporate-gifting\">corporate gifting</a> solutions that are especially suited for schools, educational brands, wellness companies, kids’ organisations, and more.</p><p>We also offer:</p><ul><li>Co-branding </li></ul><p>Add your logo, message, or campaign identity for meaningful brand visibility.</p><ul><li>Premium quality</li></ul><p>Made from 304 stainless steel, high-grade materials, and patented kid-first designs.</p><ul><li>Bulk discounts</li></ul><p>You get to save more with large-volume orders.</p><ul><li>PAN-India convenience</li></ul><p>We offer free shipping, COD, and seamless fulfilment for large or small quantities.</p><h3>Gift cards</h3><p>If you are not sure about which lunch box to choose, you can let the recipient pick their favourite things with Basil <a href=\"https://yourbasil.com/collections/gift-card\">gift cards</a>.</p><h2>Bento lunch boxes under budget </h2><p>Basil is here to make sure every lunch break, every sip, and every little meal moment feels bold, playful, and unapologetically unique, that too at different price points.</p><h3>Bento lunch boxes under 2499</h3><p>Premium doesn’t mean super expensive. You can explore some of our best bento lunch boxes for office and school, options that deliver quality without letting you break the bank.</p><h3>Bento lunch boxes under 3499</h3><p>Get leak proof bento lunch box options with insulated components, vibrant character themes and feature-rich designs. </p><p>Every price point delivers: safe materials, thoughtful design, and products that kids and adults absolutely love to use.</p><h2>Why choose kids’ bento lunch boxes from Basil</h2><p>Basil creates bento boxes, bottles, and meal-time accessories that are full of personality. After all, your child deserves a tiffin box that feels as lively and expressive as they are.</p><h3>Born to stand out</h3><p>Our colourful bento lunch box for kindergarten kids with playful characters and fun designs comes with compartments that spark joy the moment kids open them.</p><h3>Make everyday magic</h3><p>We turn everyday routines like packing lunch into tiny moments of delight. When kids love their school lunch box, they eat better and come home with empty tiffins more often!</p><h3>It’s a whole vibe</h3><p>Our stainless steel bento box is not just about food storage, but also personality, imagination, and joy in every box.</p><p>With Basil, every lunch break becomes a moment that feels special and colourful.</p><h3>Certifications</h3><p>Our premium lunch boxes, including Bento Neo, Quad, Quad+, and Binge, are CPC certified and FDA approved. This ensures the highest safety standards for your child’s meals.</p><h2>Frequently Asked Questions</h2><h3>1. How to choose a safe lunch box for kids in India?</h3><p>Look for a safe BPA-free lunch box for school children in India, made from food-grade materials like 304 stainless steel. You can also check for certifications like FDA, BIS, and CPC. A good kids lunch box should be leak-proof, easy for small hands to open, lightweight, and free from harmful plastics or chemicals.</p><p>Basil’s stainless steel bento box range is tested, certified, and thoughtfully designed specifically for office and school routines.</p><h3>2. Is a bento lunch box leakproof for liquid items like dal, curd, or dips?</h3><p>Yes. Basil’s leak proof lunch box designs are 100% leak-resistant, even with liquids. Our leakproof stainless steel bento box for kids in India uses precision-fit lids and food-grade silicone seals to keep gravies securely contained.</p><p>This way, there will be no mess in school bags and no spills on books. </p><h3>3. Are bento lunch boxes easy for kids to open and close by themselves?</h3><p>Yes. We design every bento leak proof lunch box for kids with smooth, child-friendly latches that little hands can open independently. Our non-toxic bento lunch box for school lunches has been designed to let kids open their lunch without any help. This helps build confidence and self-reliance.</p><h3>4. Why do parents prefer bento boxes over regular tiffins?</h3><p>Parents choose bento tiffin box options because they help with:</p><p>Portion control</p><p>No food mixing</p><p>Leak-proof design</p><p>Easy to clean</p><p>Durable material</p><p>Kids love them</p><h3>5. Where to buy child-safe bento lunch boxes online in India?</h3><p>You can shop for premium, safe, stainless steel bento lunch boxes for children from the Basil website.</p><h3>6. Which bento box is best for kids with picky eating habits?</h3><p>A colourful bento lunch box for kids with playful characters and 3-4 compartments works very well. It separates food items and lets you offer small, appealing portions that your child can pick and eat. </p><h3>7. What are the must-have accessories for a bento lunch setup?</h3><p>To complete your child’s lunchtime experience, you can explore our range of other mess-free products, including:</p><p>Insulated food jars </p><p>Water bottles </p><p>Stainless steel plates</p><p>Dips </p><h3>8. Can bento boxes go in the microwave/dishwasher?</h3><p>Our stainless steel lunch box with compartments is 100% dishwasher safe. This makes cleanup effortless. However, stainless steel should not be microwaved. If you need to reheat food, transfer it to a microwave-safe container first.</p>"
+      }
     },
     "banner": {
-      "type": "basil-promo-banner"
+      "type": "basil-promo-banner",
+      "settings": {
+        "image": "shopify://shop_images/PromoBanner.webp",
+        "link": ""
+      }
     }
   },
   "order": [
