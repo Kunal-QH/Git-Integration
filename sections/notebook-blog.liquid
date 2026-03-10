@@ -9,17 +9,18 @@
       {% for block in section.blocks %}
         <article class="notebook-card">
           <a class="notebook-img-a" href="{{ block.settings.link }}">
-            <div class="notebook-image">
-              {{ block.settings.image | image_url: width: 600 | image_tag }}
-            </div>
+            {{ block.settings.image | image_url: width: 600 | image_tag }}
           </a>
 
           <div class="notebook-content">
             <div class="notebook-tags">
-              <span class="tag">{{ block.settings.tag }}</span>
+              {% assign tags_array = block.settings.tag | split: ', ' %}
+              {% for tag in tags_array %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
             </div>
 
-            <h3>{{ block.settings.title }}</h3>
+            <h4>{{ block.settings.title }}</h4>
 
             <p>{{ block.settings.text }}</p>
 
@@ -68,7 +69,7 @@
   }
 
   .notebook-card {
-    max-height: 20vh;
+    height: fit-content;
     min-width: 30vw;
     background: white;
     border-radius: 22px;
@@ -78,25 +79,27 @@
     flex-direction: column;
   }
 
-  .notebook-card > .notebook-img-a {
-    height: 100%;
-  }
-
-  .notebook-image img {
-    object-fit: contain;
-    {% comment %} height: 100%; {% endcomment %}
-    {% comment %} width: 100%; {% endcomment %}
+  .notebook-img-a img {
+    object-fit: cover;
+    max-height: 30vh;
+    width: 100%;
   }
 
   .notebook-content {
     padding: 22px;
+    font-size: 0.7em;
+  }
+
+  .notebook-content p {
+    color: #006a54;
   }
 
   .tag {
     background: #e1f2ef;
     padding: 6px 14px;
+    border: 1px solid #c1d2cf;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 0.8em;
   }
 
   .read-more {
